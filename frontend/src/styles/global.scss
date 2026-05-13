@@ -1,0 +1,191 @@
+:root {
+  --sanguo-primary: #b30000;
+  --sanguo-primary-light: #cc1f1f;
+  --sanguo-primary-dark: #8a0000;
+  --sanguo-gold: #c58a2d;
+  --sanguo-brown: #5c4033;
+  --sanguo-brown-light: #7d5a4a;
+  --sanguo-bg: #f5f5f5;
+  --sanguo-bg-card: #ffffff;
+  --sanguo-text: #1f2328;
+  --sanguo-text-secondary: #57606a;
+  --sanguo-border: #e5e5e5;
+  --sanguo-success: #2e7d32;
+  --sanguo-warning: #b7791f;
+  --sanguo-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 10px 24px rgba(0, 0, 0, 0.06);
+  --sanguo-shadow-hover: 0 1px 2px rgba(0, 0, 0, 0.08), 0 14px 30px rgba(0, 0, 0, 0.08);
+  --sanguo-radius: 8px;
+  --sanguo-maxw: 1200px;
+
+  --el-color-primary: var(--sanguo-primary);
+  --el-color-primary-light-3: var(--sanguo-primary-light);
+  --el-color-primary-dark-2: var(--sanguo-primary-dark);
+  --el-border-radius-base: var(--sanguo-radius);
+  --el-border-color: var(--sanguo-border);
+  --el-text-color-primary: var(--sanguo-text);
+  --el-text-color-regular: var(--sanguo-text);
+  --el-text-color-secondary: var(--sanguo-text-secondary);
+  --el-bg-color: var(--sanguo-bg);
+  --el-bg-color-overlay: var(--sanguo-bg-card);
+  --el-fill-color-light: #f4f0e8;
+  --el-fill-color-blank: var(--sanguo-bg-card);
+  --el-mask-color: rgba(31, 35, 40, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--sanguo-bg);
+  color: var(--sanguo-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--sanguo-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sg-container {
+  width: 100%;
+  max-width: var(--sanguo-maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sg-page {
+  padding: 18px 0 28px;
+}
+
+.sg-page-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sg-page-title h1 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.sg-subtitle {
+  margin-top: 4px;
+  color: var(--sanguo-text-secondary);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.sg-card {
+  border: 1px solid var(--sanguo-border);
+  border-radius: var(--sanguo-radius);
+  box-shadow: var(--sanguo-shadow);
+  background: var(--sanguo-bg-card);
+}
+
+.sg-card.is-hover:hover {
+  box-shadow: var(--sanguo-shadow-hover);
+}
+
+.sg-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.sg-muted {
+  color: var(--sanguo-text-secondary);
+}
+
+.sg-prose {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--sanguo-text);
+  word-break: break-word;
+}
+
+.sg-prose h2 {
+  margin: 18px 0 10px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.sg-prose p {
+  margin: 10px 0;
+}
+
+.sg-prose blockquote {
+  margin: 14px 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--sanguo-primary);
+  background: rgba(122, 31, 31, 0.06);
+  border-radius: 8px;
+  color: var(--sanguo-text);
+}
+
+.sg-divider {
+  height: 1px;
+  background: var(--sanguo-border);
+  margin: 16px 0;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--sanguo-primary);
+  --el-button-border-color: var(--sanguo-primary);
+  --el-button-hover-bg-color: var(--sanguo-primary-light);
+  --el-button-hover-border-color: var(--sanguo-primary-light);
+}
+
+.el-card {
+  border-radius: var(--sanguo-radius);
+  border-color: var(--sanguo-border);
+}
+
+.el-card__header {
+  border-bottom-color: var(--sanguo-border);
+}
+
+.el-input__wrapper,
+.el-textarea__inner {
+  border-radius: 10px;
+}
+
+.el-menu-item.is-active {
+  color: var(--sanguo-primary) !important;
+  background: rgba(179, 0, 0, 0.06) !important;
+}
+
+.page-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sanguo-text);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--sanguo-border);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sanguo-text);
+}
