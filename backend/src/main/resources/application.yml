@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    # 当前启用的环境配置：会加载 application-{active}.yml（例如 dev）
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      # 上传限制（对应文件上传接口）
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  # 后端端口；前端默认通过 /api 代理到这里
+  port: 8080
+  servlet:
+    # 接口统一前缀（重要）：前端 request.js baseURL=/api，必须与这里一致
+    context-path: /api
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+file:
+  # 上传文件落地目录（相对路径会基于运行时工作目录 user.dir 计算）
+  upload-dir: uploads
+  # 对外访问静态资源的 URL 前缀（例如 /uploads/xxx.jpg）
+  public-path: /uploads
+
+ai:
+  zhipu:
+    # 大模型配置。建议把 api-key 放到环境变量或 application-dev.yml，本文件尽量避免提交真实密钥。
+    api-key: "104b8ef37f864744b24a843cdd39887e.lfG9aZ250WYpJfQu"
+    chat-model: "glm-4-flash"
+    embedding-model: "embedding-3"

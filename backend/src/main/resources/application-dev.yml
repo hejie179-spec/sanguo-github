@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    # useUnicode=true&characterEncoding=utf8
+    # serverTimezone=Asia/Shanghai&useSSL=false
+    # allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sanguo?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+# JWT（请按需修改密钥）
+jwt:
+  secret: sanguo-jwt-secret-key-2024-min-32-chars
+  expiration: 86400000  # 24小时 毫秒
