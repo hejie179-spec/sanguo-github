@@ -40,6 +40,6 @@ file:
 ai:
   zhipu:
     # 大模型配置。建议把 api-key 放到环境变量或 application-dev.yml，本文件尽量避免提交真实密钥。
-    api-key: "104b8ef37f864744b24a843cdd39887e.lfG9aZ250WYpJfQu"
+    api-key: "你的API"
     chat-model: "glm-4-flash"
     embedding-model: "embedding-3"
